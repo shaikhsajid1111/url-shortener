@@ -52,6 +52,7 @@ footer .fab:hover {
   -webkit-box-shadow: -4px -1px 51px -13px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: -4px -1px 51px -13px rgba(0, 0, 0, 0.75);
   box-shadow: -4px -1px 51px -13px rgba(0, 0, 0, 0.75);
+  border: 1px solid white;
 }
 
 footer a {

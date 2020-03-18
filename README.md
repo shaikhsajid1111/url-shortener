@@ -25,3 +25,6 @@
 - [Popper Js](https://popper.js.org/) - UI
 - [pyshorteners](https://pypi.org/project/pyshorteners/)  
 - [Hover](https://ianlunn.github.io/Hover/)  - UI
+
+## LICENSE
+Apache License 2.0
