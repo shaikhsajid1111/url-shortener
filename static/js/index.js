@@ -1,4 +1,3 @@
-
 $(".copy").on("click",function(){
     var copiedText = $("#short_url"); 
     if(copiedText != ""){

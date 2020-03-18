@@ -15,13 +15,15 @@
     <script src="https://kit.fontawesome.com/5de3ed83f2.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{% static 'style/bttn.css' %}">
     <link rel="stylesheet" href="{% static 'style/materialize.min.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
     <title>Url Shortener</title>
 
     <!-- Image and text -->
-    <nav class="navbar navbar-light bg-light ">
-      <span class="navbar-brand mb-1 pb-2 h1">URL Shortener <i class="fa fa-link"></i></span>
+    
+    <nav class="navbar sticky-top navbar-light bg-light">
+      <a class="navbar-brand" href="#"><i class="fa fa-link"></i> URL Shortener</a>
+     
     </nav>
-
 
 </head>
 <body>
@@ -31,13 +33,6 @@
 <div class="container">
     <form method="POST">
         {%csrf_token%}
-<!-- <div class="row col-md-8">
-        <input id="long-url" style="outline:none; box-shadow:none;" class="form-control form-control-md text-center" name="url" value="{{ long_url }}" type="url" placeholder="Enter URL" autocomplete="off" required>
-        
-    </div> -->
-
-
-    <!---->
 
     <div class="row">
         <div class="input-field col s6">
@@ -47,16 +42,13 @@
       </div>
 
 
-      
-    <!---->
-
-
+   
        
-    <label>Select Server</label>
-  <select class="browser-default" name="servers">
-  <option value="" disabled selected>Choose your option</option>
+    <label>Select Shortener</label>
+  <select class="browser-default" name="servers" required>
+  <option value="" disabled selected>Choose your Shortener</option>
   <option value="chilpit">Chilpit</option>
-  <option value="clckru" selected>Clckru</option>
+  <option value="clckru" >Clckru</option>
   <option value="dagd">Dagd</option>
   <option value="gitio">Gitio</option>
   <option value="isgd">Isgd</option>
@@ -96,11 +88,6 @@
 
 </div>
 
-<!---Popup-->
-<!-- Button trigger modal -->
-
-
-<!-- Modal -->
 
 
 <script src="{% static 'js/materialize.min.js' %}"></script>

@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  height: 100vh;
 }
 
 button {
@@ -18,4 +19,16 @@ button {
 
 .hide {
   display: none;
+}
+
+nav {
+  height: 10vh !important;
+}
+
+.navbar-brand {
+  line-height: 7vh !important;
+}
+
+.fa-link {
+  color: #28b78d;
 }
