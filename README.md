@@ -19,8 +19,9 @@
 - [Bootstrap](https://getbootstrap.com/) - For Responsive UI
 - [Font Awesome](https://fontawesome.com/) - For Icons
 - [Django](https://www.djangoproject.com/) - Backend
-- [JQuery](https://jquery.com/)   - Interface
-- [Bttn](https://bttn.surge.sh/)  - Interface
-- [materializecss](https://materializecss.com/) - Interface
-- [Popper Js](https://popper.js.org/) - Interface
-
+- [JQuery](https://jquery.com/)   - UI
+- [Bttn](https://bttn.surge.sh/)  - UI
+- [materializecss](https://materializecss.com/) - UI
+- [Popper Js](https://popper.js.org/) - UI
+- [pyshorteners](https://pypi.org/project/pyshorteners/)  
+- [Hover](https://ianlunn.github.io/Hover/)  - UI

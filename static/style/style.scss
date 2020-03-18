@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Muli|Nunito|Roboto+Mono|Sen&display=swap');
 body{
     margin: 0;
     padding: 0;
@@ -19,10 +20,95 @@ button{
 }
 nav{
     height: 10vh !important;
+    .navbar-brand{
+        line-height: 7vh !important;
+    }
+    .fa-link{
+        color: #28b78d;
+    }
 }
-.navbar-brand{
-    line-height: 7vh !important;
+
+
+footer{
+    min-width: 10vh;
+    padding-top: 8vh;
+    //apply hover color
+
+    .fab{
+        font-size: 1.9em;
+        color: black;
+        margin: 0.8rem;
+        border: 1px solid black;
+        padding: 1rem;
+        border-radius: 50%;
+        &:hover{
+            -webkit-box-shadow: -4px -1px 51px -13px rgba(0,0,0,0.75);
+-moz-box-shadow: -4px -1px 51px -13px rgba(0,0,0,0.75);
+box-shadow: -4px -1px 51px -13px rgba(0,0,0,0.75);
+        }
+        
+    }
+    a{
+        text-decoration: none;
+        outline: transparent;
+        &:hover{
+            text-decoration: none !important;
+            outline: 0;
+        }
+        &:focus{
+            text-decoration: none;
+        }
+    }
+    &:hover{
+        background-color: green($color: #000000);
+    }
+    .fa-facebook{
+        color: #3b5998;
+        &:hover{
+            color: white;
+            background-color: #3b5998;
+        }
+        
+    }
+    .fa-instagram{
+        color: #e4405f;
+       &:hover{
+           color: white;
+           background-color: #e4405f;
+       }
+    }
+    .fa-github{
+        color: black;
+        &:hover{
+        background-color: black;
+        color: white;
+        }
+    }
+    .fa-twitter{
+        color: #55acee;
+        &:hover{
+            background-color: #55acee;
+            color: white;
+        }
+        
+    }
+    .fa-stack-overflow{
+        color: #ef8236;
+        &:hover{
+            background-color: #ef8236;
+            color: white;
+        }
+    }
+    h4{
+        font-family: 'Sen', sans-serif;
+    }
+    p{
+        font-family: 'Muli', sans-serif;
+    }
 }
-.fa-link{
-    color: #28b78d;
-}
+/*
+font-family: 'Sen', sans-serif;
+font-family: 'Roboto Mono', monospace;
+font-family: 'Muli', sans-serif;
+font-family: 'Nunito', sans-serif;
+*/

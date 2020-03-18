@@ -1,11 +1,12 @@
-from django.shortcuts import render,HttpResponse
+from django.shortcuts import render
 import pyshorteners
-from clipboard import paste
-# Create your views here.
-
+#inheiting the Shorteners class from pyshorteners
 class shorteners(pyshorteners.Shortener):
     
     def chilpit_shortener(self,url):
+        '''tries to short the URL and returns
+        if fails than it returns that it cannot 
+        further short the URL'''
         try:
             return self.chilpit.short(url)
         except:
@@ -33,7 +34,6 @@ class shorteners(pyshorteners.Shortener):
             return "This URL cannot be further shortened"
     def osdb_shortener(self,url):
         try:
-
             return self.osdb.short(url)
         except:
             return "This URL cannot be further shortened"
@@ -55,7 +55,9 @@ class shorteners(pyshorteners.Shortener):
 
 
 def generate_url(server_name,url):
-    url_shortener = shorteners()
+    '''generates short URL accorind to the shorteners passed as a
+    argument'''
+    url_shortener = shorteners()            #instance of shorteners class
     if server_name == "chilpit":
         return url_shortener.chilpit_shortener(url)
     elif server_name == "clckru":    
@@ -74,14 +76,15 @@ def generate_url(server_name,url):
             return url_shortener.qpsru_shortener(url)
         elif server_name == 'tinyUrl':
             return url_shortener.tinyUrl_shortener(url)
-    #all_methods_from_template = ('chilpit','clckru','dagd','gitio','isgd','osdb','owly','qpsru','tinyUrl')
+   
     
 
 def index(request):
+    '''Handling the request that has been passed'''
     if request.method == "POST":
-        server_name = request.POST["servers"]
-        url = request.POST["url"]
-        data = {'short_url':generate_url(server_name,url),'long_url':url}
+        server_name = request.POST["shorteners"]    #fetching shortener name
+        url = request.POST["url"]                       #fetching long URL given by user
+        data = {'short_url':generate_url(server_name,url),'long_url':url} #dict containing short and long URL
         return render(request,"index.html",data)
     else:
         return render(request,"index.html",{})    

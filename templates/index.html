@@ -2,23 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!--Responsive meta tag-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% load static %}
+    {% load static %} <!--Loading content from server side js,css,scss-->
+    <!--Local CSS-->
     <link rel="stylesheet" href="{% static 'style/style.css' %}">
+    <!--bootstrap's CDN CSS-->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>  <!--Jquery CDN-->
-    <!--Bootstrap CDN-->
+    <!--popper js CDN-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <!--Bootstrap Js CDN-->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>  
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
     <!--font awesome CDN-->
     <script src="https://kit.fontawesome.com/5de3ed83f2.js" crossorigin="anonymous"></script>
+    <!--bttn.css local-->
     <link rel="stylesheet" href="{% static 'style/bttn.css' %}">
+    <!--materialize local stylesheet-->
     <link rel="stylesheet" href="{% static 'style/materialize.min.css' %}">
+    <!--Favicon-->
     <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
     <title>Url Shortener</title>
 
-    <!-- Image and text -->
+    <!-- navbar -->
     
     <nav class="navbar sticky-top navbar-light bg-light">
       <a class="navbar-brand" href="#"><i class="fa fa-link"></i> URL Shortener</a>
@@ -26,16 +34,19 @@
     </nav>
 
 </head>
+
 <body>
 
 <div class="container-fluid pt-4">
     <center>
 <div class="container">
-    <form method="POST">
+  <!--form for URL-->  
+  <form method="POST">
         {%csrf_token%}
 
     <div class="row">
         <div class="input-field col s6">
+          <!--URL input-->
           <input value="{{long_url}}" autocomplete="off" name="url" id="long_url" type="url" required><i class="fa fa-paste btn "  id="paste"></i>
           <label class="active" for="long-url">Enter URL</label>
         </div>
@@ -43,10 +54,10 @@
 
 
    
-       
+       <!--Options for shorteners-->
     <label>Select Shortener</label>
-  <select class="browser-default" name="servers" required>
-  <option value="" disabled selected>Choose your Shortener</option>
+  <select class="browser-default" name="shorteners" required>
+  <option value="" disabled selected>Choose your shortener</option>
   <option value="chilpit">Chilpit</option>
   <option value="clckru" >Clckru</option>
   <option value="dagd">Dagd</option>
@@ -56,44 +67,60 @@
   <option value="qpsru">Qpsru</option>
   <option value="tinyUrl">Tiny Url</option>  
   </select>
-          <!---->
+          <!--output's input field-->
           <div class="row">
             <div class="input-field col s6">
               <input value="{{short_url}}" id="short_url" type="url" readonly>
               <label class="active" for="short-url">Short URL</label>
             </div>
           </div>
-
-
-          
-        
-<!---->
     </div>
 
-<div class="row col-md-3 pt-1">
-    
+<!--Submit button-->
+    <div class="row col-md-3 pt-1">    
         <input type="submit" id="short_button" class="bttn-unite bttn-md bttn-success col" value="Short this URL">    
     </div>
-    
     </form>
 </center>
-    <center>
-<div class="text-center pt-2">
-    <button class="copy bttn-unite bttn-md bttn-success text-uppercase" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Text Copied" data-content="Link has been Copied!">Copy</button>
     
-    <button class="clear ml-3 bttn-unite bttn-md bttn-success text-uppercase">Clear</button>
+<center>
+<div class="text-center pt-2">
+  <!--Copy and clear buttons-->  
+  <button class="copy bttn-unite bttn-md bttn-success text-uppercase" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Text Copied" data-content="Link has been Copied!"><i class="fa fa-copy"></i> Copy </button>    
+  <button class="clear ml-3 bttn-unite bttn-md bttn-success text-uppercase"><i class="fa fa-backspace"></i> Clear </button>
 </div>
 </center>
 </div>
 
 </div>
-
-
-
+<!--materialize.js local-->
 <script src="{% static 'js/materialize.min.js' %}"></script>
-
-
+<!--local js file-->
 <script src="{% static 'js/index.js' %}"></script>
 
 </body>
+<footer>
+
+<div class="container-fluid text-center">
+  <div class="container">
+        <h4 class="text-center">Contact Me</h4>
+    
+ 
+    <a href="https://www.facebook.com/shaikhsajid1111" class="fab fa-facebook hvr-grow"></a>
+    <a href="https://www.insagram.com/shaikhsajid1111" class="fab fa-instagram hvr-grow"></a>
+    <a href="https://www.twitter.com/shaikhsajid1111" class="fab fa-twitter hvr-grow"></a>
+    <a href="https://stackoverflow.com/users/10282818/s-sajid" class="fab fa-stack-overflow hvr-grow"></a>
+    <a href="https://www.github.com/shaikhsajid1111" class="fab fa-github hvr-grow"></a>
+  </div>
+</div>
+<p class="text-center">Copyright <i class="fa fa-copyright" aria-hidden="true"></i> <span id="year"> </span>,<a href="https://www.github.com/shaikhsajid1111"> Sajid Shaikh</a></p>
+<script>
+var d = new Date();
+document.getElementById("year").innerHTML = d.getFullYear();
+
+</script>
+</footer>
+
+
+
 </html>

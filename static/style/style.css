@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Muli|Nunito|Roboto+Mono|Sen&display=swap");
 body {
   margin: 0;
   padding: 0;
@@ -25,10 +26,108 @@ nav {
   height: 10vh !important;
 }
 
-.navbar-brand {
+nav .navbar-brand {
   line-height: 7vh !important;
 }
 
-.fa-link {
+nav .fa-link {
   color: #28b78d;
 }
+
+footer {
+  min-width: 10vh;
+  padding-top: 8vh;
+}
+
+footer .fab {
+  font-size: 1.9em;
+  color: black;
+  margin: 0.8rem;
+  border: 1px solid black;
+  padding: 1rem;
+  border-radius: 50%;
+}
+
+footer .fab:hover {
+  -webkit-box-shadow: -4px -1px 51px -13px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -4px -1px 51px -13px rgba(0, 0, 0, 0.75);
+  box-shadow: -4px -1px 51px -13px rgba(0, 0, 0, 0.75);
+}
+
+footer a {
+  text-decoration: none;
+  outline: transparent;
+}
+
+footer a:hover {
+  text-decoration: none !important;
+  outline: 0;
+}
+
+footer a:focus {
+  text-decoration: none;
+}
+
+footer:hover {
+  background-color: 0;
+}
+
+footer .fa-facebook {
+  color: #3b5998;
+}
+
+footer .fa-facebook:hover {
+  color: white;
+  background-color: #3b5998;
+}
+
+footer .fa-instagram {
+  color: #e4405f;
+}
+
+footer .fa-instagram:hover {
+  color: white;
+  background-color: #e4405f;
+}
+
+footer .fa-github {
+  color: black;
+}
+
+footer .fa-github:hover {
+  background-color: black;
+  color: white;
+}
+
+footer .fa-twitter {
+  color: #55acee;
+}
+
+footer .fa-twitter:hover {
+  background-color: #55acee;
+  color: white;
+}
+
+footer .fa-stack-overflow {
+  color: #ef8236;
+}
+
+footer .fa-stack-overflow:hover {
+  background-color: #ef8236;
+  color: white;
+}
+
+footer h4 {
+  font-family: 'Sen', sans-serif;
+}
+
+footer p {
+  font-family: 'Muli', sans-serif;
+}
+
+/*
+font-family: 'Sen', sans-serif;
+font-family: 'Roboto Mono', monospace;
+font-family: 'Muli', sans-serif;
+font-family: 'Nunito', sans-serif;
+*/
