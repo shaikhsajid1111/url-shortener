@@ -5,7 +5,7 @@
 **Provides multiple shorteners to chose from**
 
 ### Here's the list of shorteners available:
-- [Chilpit](http://chilp.it/)
+- [Chilp.it](http://chilp.it/)
 - [Clck.ru](https://clck.ru/)
 - [da.gd](https://da.gd/)
 - [git.io](https://git.io/)
@@ -26,5 +26,17 @@
 - [pyshorteners](https://pypi.org/project/pyshorteners/)  
 - [Hover](https://ianlunn.github.io/Hover/)  - UI
 
+# Here are Screenshots
+
+![screenshots](screenshots/capture.png)
+
+
+
+
+![GIF demo](screenshots/url.gif)
+
+
+
 ## LICENSE
+
 Apache License 2.0

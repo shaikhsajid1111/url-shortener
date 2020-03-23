@@ -58,6 +58,7 @@ footer .fab:hover {
 footer a {
   text-decoration: none;
   outline: transparent;
+  color: #28b78d;
 }
 
 footer a:hover {
