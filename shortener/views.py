@@ -1,5 +1,6 @@
 from django.shortcuts import render
 import pyshorteners
+from django.views.decorators.csrf import csrf_exempt
 #inheiting the Shorteners class from pyshorteners
 class shorteners(pyshorteners.Shortener):
     
@@ -76,14 +77,14 @@ def generate_url(server_name,url):
             return url_shortener.qpsru_shortener(url)
         elif server_name == 'tinyUrl':
             return url_shortener.tinyUrl_shortener(url)
-   
+        
     
-
+@csrf_exempt
 def index(request):
     '''Handling the request that has been passed'''
-    if request.method == "POST":
-        server_name = request.POST["shorteners"]    #fetching shortener name
-        url = request.POST["url"]                       #fetching long URL given by user
+    if request.method == "GET":
+        server_name = request.GET.get("shorteners")    #fetching shortener name
+        url = request.GET.get("url")                       #fetching long URL given by user
         data = {'short_url':generate_url(server_name,url),'long_url':url} #dict containing short and long URL
         return render(request,"index.html",data)
     else:
